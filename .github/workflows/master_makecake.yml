@@ -52,5 +52,5 @@ jobs:
       with:
         app-name: 'makecake'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_bc069ce9f70a4765a0f2e1008d4a9a81 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_9eb5fc3972854e40b0be3ad5bb6da2ac }}
         package: .
