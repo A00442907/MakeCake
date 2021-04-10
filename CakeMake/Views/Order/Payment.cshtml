@@ -1,0 +1,47 @@
+@model Payment
+
+<form asp-action="Payment" method="Post" class="form-horizontal" role="form">
+    <h4>You're one step away from ordering awesome cake</h4>
+    <div asp-validation-summary="All" class="danger"></div>
+    <div class="form-group">
+        <label asp-for="CardType" class="col-md-2 control-label"></label>
+        <input asp-for="CardType" id="Card_type" name="CardType" value="American" checked="checked" type="radio">
+        American
+        <input asp-for="CardType" id="Card_type" name="CardType" value="Visa" type="radio">
+        Visa
+        <input asp-for="CardType" id="Card_type" name="CardType" value="MasterCard" type="radio">
+        MasterCard
+    </div>
+
+    <div class="form-group">
+        <label asp-for="HolderName" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="HolderName" class="form-control" />
+            <span asp-validation-for="HolderName" class="danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CardNumber" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="CardNumber" class="form-control" />
+            <span asp-validation-for="CardNumber" class="danger"></span>
+            <span asp-validation-for="CardMix" class="danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ExpireDate" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="ExpireDate" class="form-control" />
+            (MM/YYYY)
+            <span asp-validation-for="ExpireDate" class="danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-5">
+            <input type="submit" class="btn btn-primary" value="Complete Order" />
+        </div>
+    </div>
+</form>
